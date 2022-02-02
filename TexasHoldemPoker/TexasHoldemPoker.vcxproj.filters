@@ -1,0 +1,451 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="소스 파일">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="헤더 파일">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="리소스 파일">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="GameScene">
+      <UniqueIdentifier>{708cf692-fcb6-4456-a370-89334f8a19f6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GameOption">
+      <UniqueIdentifier>{21090cb7-c366-4209-8231-f461a70be0a6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GameObject">
+      <UniqueIdentifier>{2d6598b0-1df6-4d1b-b4f2-021fd30e0205}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GameAI">
+      <UniqueIdentifier>{ea24068c-2b2c-4da9-a00b-6778cb513504}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GameUtility">
+      <UniqueIdentifier>{0ff2b649-f707-49d4-a0ae-e967b8ffd834}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Direct2D">
+      <UniqueIdentifier>{9aba9bb5-4318-4463-a25b-299b9c6d8c22}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource">
+      <UniqueIdentifier>{2442dfc6-9905-4a73-bee9-4627a0d09001}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="NetworkPlay">
+      <UniqueIdentifier>{048fa02e-b08d-42b3-8303-7e0ddb4e75bd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GameSound">
+      <UniqueIdentifier>{7e8a5171-054f-4032-9b00-b52a4aa4f9f5}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="framework.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="targetver.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Resource.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="TexasHoldemPoker.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Direct2D\Direct2DEngine.h">
+      <Filter>Direct2D</Filter>
+    </ClInclude>
+    <ClInclude Include="GameScene\GameScene.h">
+      <Filter>GameScene</Filter>
+    </ClInclude>
+    <ClInclude Include="GameScene\LoadingScene.h">
+      <Filter>GameScene</Filter>
+    </ClInclude>
+    <ClInclude Include="GameScene\MainMenuScene.h">
+      <Filter>GameScene</Filter>
+    </ClInclude>
+    <ClInclude Include="GameScene\MultiPlayScene.h">
+      <Filter>GameScene</Filter>
+    </ClInclude>
+    <ClInclude Include="GameScene\OptionScene.h">
+      <Filter>GameScene</Filter>
+    </ClInclude>
+    <ClInclude Include="GameScene\SinglePlayScene.h">
+      <Filter>GameScene</Filter>
+    </ClInclude>
+    <ClInclude Include="GameOption\GameOption.h">
+      <Filter>GameOption</Filter>
+    </ClInclude>
+    <ClInclude Include="GameObejct\GameObject.h">
+      <Filter>GameObject</Filter>
+    </ClInclude>
+    <ClInclude Include="GameUtility\FileSaveAndLoader.h">
+      <Filter>GameUtility</Filter>
+    </ClInclude>
+    <ClInclude Include="GameNetwork\NetworkGamePlay.h">
+      <Filter>NetworkPlay</Filter>
+    </ClInclude>
+    <ClInclude Include="GameNetwork\NetworkGuest.h">
+      <Filter>NetworkPlay</Filter>
+    </ClInclude>
+    <ClInclude Include="GameNetwork\NetworkHost.h">
+      <Filter>NetworkPlay</Filter>
+    </ClInclude>
+    <ClInclude Include="GameNetwork\NetworkPlayer.h">
+      <Filter>NetworkPlay</Filter>
+    </ClInclude>
+    <ClInclude Include="GameNetwork\NetworkRoom.h">
+      <Filter>NetworkPlay</Filter>
+    </ClInclude>
+    <ClInclude Include="GameSound\EffectSound.h">
+      <Filter>GameSound</Filter>
+    </ClInclude>
+    <ClInclude Include="GameSound\BackGroundSound.h">
+      <Filter>GameSound</Filter>
+    </ClInclude>
+    <ClInclude Include="GameSound\Sound.h">
+      <Filter>GameSound</Filter>
+    </ClInclude>
+    <ClInclude Include="GameSound\AudioEngine.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Funtions\MyFunctions.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Direct2D\Canvas.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Direct2D\AdvancedUI\Button.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Direct2D\BasicUI\CBitmap.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Direct2D\BasicUI\CEllipse.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Direct2D\BasicUI\Color.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Direct2D\BasicUI\CRectangle.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Direct2D\BasicUI\Shape.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Direct2D\BasicUI\Text.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Direct2D\BasicUI\RigidBody2D.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Direct2D\BasicUI\RectTransform.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Direct2D\AdvancedUI\ListView.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="GameScene\SceneManager.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Direct3D\DirectXEngine.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Direct2D\AdvancedUI\CImage.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="PokerRule\GameAI.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="PokerRule\PokerDefine.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="PokerRule\PokerRule.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="GameScene\PlaySceneDefine.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="GameEvent\ButtonEvents.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Direct2D\BasicUI\UIArea.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Direct2D\BasicUI\UIBoxArea.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="GameScene\ExitScene.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Direct2D\CustomUI\MainMenuButton.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Direct2D\CustomUI\UpAndDownButton.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Direct2D\CustomUI\BackButton.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Direct2D\AdvancedUI\CheckBox.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Direct2D\AdvancedUI\TextOutputField.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Funtions\ChangeCounter.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Direct2D\CustomUI\CustomTextOutputField.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="GameOption\SupportWindow.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="GameScene\SinglePlay\SinglePlaySettingScene.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="GameScene\SinglePlay\SinglePlayingScene.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Direct2D\AdvancedUI\TextInputField.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Direct2D\CustomUI\NumberInputField.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Direct2D\AdvancedUI\Dialog.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="GameUtility\GameTime.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Direct2D\CustomUI\CustomTextInputField.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Direct2D\CustomUI\CardImages.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="PokerRule\PokerSystem.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Direct2D\Animation\StartAnimation.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="GameUtility\Timer.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="GameScene\SinglePlay\SinglePlayPhase.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Direct2D\Animation\CardAnimation.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Direct2D\CustomUI\PokerUI.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="TexasHoldemPoker.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Direct2D\Direct2DEngine.cpp">
+      <Filter>Direct2D</Filter>
+    </ClCompile>
+    <ClCompile Include="GameScene\OptionScene.cpp">
+      <Filter>GameScene</Filter>
+    </ClCompile>
+    <ClCompile Include="GameScene\SinglePlayScene.cpp">
+      <Filter>GameScene</Filter>
+    </ClCompile>
+    <ClCompile Include="GameScene\MultiPlayScene.cpp">
+      <Filter>GameScene</Filter>
+    </ClCompile>
+    <ClCompile Include="GameScene\MainMenuScene.cpp">
+      <Filter>GameScene</Filter>
+    </ClCompile>
+    <ClCompile Include="GameScene\LoadingScene.cpp">
+      <Filter>GameScene</Filter>
+    </ClCompile>
+    <ClCompile Include="GameScene\GameScene.cpp">
+      <Filter>GameScene</Filter>
+    </ClCompile>
+    <ClCompile Include="GameOption\GameOption.cpp">
+      <Filter>GameOption</Filter>
+    </ClCompile>
+    <ClCompile Include="GameObejct\GameObject.cpp">
+      <Filter>GameObject</Filter>
+    </ClCompile>
+    <ClCompile Include="GameUtility\FileSaveAndLoader.cpp">
+      <Filter>GameUtility</Filter>
+    </ClCompile>
+    <ClCompile Include="GameNetwork\NetworkGamePlay.cpp">
+      <Filter>NetworkPlay</Filter>
+    </ClCompile>
+    <ClCompile Include="GameNetwork\NetworkGuest.cpp">
+      <Filter>NetworkPlay</Filter>
+    </ClCompile>
+    <ClCompile Include="GameNetwork\NetworkHost.cpp">
+      <Filter>NetworkPlay</Filter>
+    </ClCompile>
+    <ClCompile Include="GameNetwork\NetworkPlayer.cpp">
+      <Filter>NetworkPlay</Filter>
+    </ClCompile>
+    <ClCompile Include="GameNetwork\NetworkRoom.cpp">
+      <Filter>NetworkPlay</Filter>
+    </ClCompile>
+    <ClCompile Include="GameSound\EffectSound.cpp">
+      <Filter>GameSound</Filter>
+    </ClCompile>
+    <ClCompile Include="GameSound\BackGroundSound.cpp">
+      <Filter>GameSound</Filter>
+    </ClCompile>
+    <ClCompile Include="GameSound\Sound.cpp">
+      <Filter>GameSound</Filter>
+    </ClCompile>
+    <ClCompile Include="GameSound\AudioEngine.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Funtions\MyFunctions.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Direct2D\AdvancedUI\Button.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Direct2D\BasicUI\CBitmap.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Direct2D\BasicUI\CEllipse.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Direct2D\BasicUI\Color.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Direct2D\BasicUI\CRectangle.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Direct2D\BasicUI\Text.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Direct2D\BasicUI\Shape.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Direct2D\BasicUI\RigidBody2D.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Direct2D\BasicUI\RectTransform.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Direct2D\AdvancedUI\ListView.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="GameScene\SceneManager.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Direct3D\DirectXEngine.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Direct2D\AdvancedUI\CImage.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Direct2D\BasicUI\UIArea.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Direct2D\BasicUI\UIBoxArea.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="GameScene\ExitScene.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Direct2D\CustomUI\MainMenuButton.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Direct2D\Canvas.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Direct2D\CustomUI\UpAndDownButton.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Direct2D\CustomUI\BackButton.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Direct2D\AdvancedUI\CheckBox.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Direct2D\AdvancedUI\TextOutputField.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Funtions\ChangeCounter.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Direct2D\CustomUI\CustomTextOutputField.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="GameOption\SupportWindow.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="GameScene\SinglePlay\SinglePlaySettingScene.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="GameScene\SinglePlay\SinglePlayingScene.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Direct2D\AdvancedUI\TextInputField.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Direct2D\CustomUI\NumberInputField.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Direct2D\AdvancedUI\Dialog.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="GameUtility\GameTime.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Direct2D\CustomUI\CustomTextInputField.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Direct2D\CustomUI\CardImages.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="PokerRule\PokerRule.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="PokerRule\GameAI.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="PokerRule\PokerSystem.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Direct2D\Animation\StartAnimation.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="GameUtility\Timer.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Direct2D\Animation\CardAnimation.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Direct2D\CustomUI\PokerUI.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="TexasHoldemPoker.rc">
+      <Filter>리소스 파일</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="small.ico">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="TexasHoldemPoker.ico">
+      <Filter>리소스 파일</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>15.0</VCProjectVersion>
+    <ProjectGuid>{3293DCEE-D5C3-4DD6-B9EE-309E50E5A95C}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>TexasHoldemPoker</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+    <LibraryPath>C:\Users\김정태\source\repos\TexasHoldemPoker\TexasHoldemPoker\Libs\x64\Debug;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>imm32.lib;Shcore.lib;uuid.lib;dxguid.lib;dwrite.lib;D2D1.lib;d3d11.lib;dxgi.lib;d3dcompiler.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="Direct2D\Animation\CardAnimation.h" />
+    <ClInclude Include="Direct2D\CustomUI\CardImages.h" />
+    <ClInclude Include="Direct2D\CustomUI\CustomTextInputField.h" />
+    <ClInclude Include="Direct2D\AdvancedUI\Dialog.h" />
+    <ClInclude Include="Direct2D\CustomUI\CustomTextOutputField.h" />
+    <ClInclude Include="Funtions\ChangeCounter.h" />
+    <ClInclude Include="Direct2D\AdvancedUI\CheckBox.h" />
+    <ClInclude Include="Direct2D\CustomUI\BackButton.h" />
+    <ClInclude Include="Direct2D\AdvancedUI\CImage.h" />
+    <ClInclude Include="Direct3D\DirectXEngine.h" />
+    <ClInclude Include="Direct2D\AdvancedUI\Button.h" />
+    <ClInclude Include="Direct2D\Canvas.h" />
+    <ClInclude Include="Direct2D\BasicUI\CBitmap.h" />
+    <ClInclude Include="Direct2D\BasicUI\CEllipse.h" />
+    <ClInclude Include="Direct2D\BasicUI\Color.h" />
+    <ClInclude Include="Direct2D\BasicUI\CRectangle.h" />
+    <ClInclude Include="Direct2D\AdvancedUI\ListView.h" />
+    <ClInclude Include="Direct2D\BasicUI\RectTransform.h" />
+    <ClInclude Include="Direct2D\BasicUI\RigidBody2D.h" />
+    <ClInclude Include="Direct2D\BasicUI\Shape.h" />
+    <ClInclude Include="Direct2D\BasicUI\Text.h" />
+    <ClInclude Include="GameScene\ExitScene.h" />
+    <ClInclude Include="Funtions\MyFunctions.h" />
+    <ClInclude Include="GameEvent\ButtonEvents.h" />
+    <ClInclude Include="GameScene\PlaySceneDefine.h" />
+    <ClInclude Include="GameScene\SinglePlay\SinglePlayPhase.h" />
+    <ClInclude Include="GameSound\AudioEngine.h" />
+    <ClInclude Include="GameSound\BackGroundSound.h" />
+    <ClInclude Include="Direct2D\Direct2DEngine.h" />
+    <ClInclude Include="GameSound\EffectSound.h" />
+    <ClInclude Include="GameUtility\GameTime.h" />
+    <ClInclude Include="GameUtility\FileSaveAndLoader.h" />
+    <ClInclude Include="framework.h" />
+    <ClInclude Include="GameObejct\GameObject.h" />
+    <ClInclude Include="GameOption\GameOption.h" />
+    <ClInclude Include="GameScene\GameScene.h" />
+    <ClInclude Include="GameScene\LoadingScene.h" />
+    <ClInclude Include="GameScene\MainMenuScene.h" />
+    <ClInclude Include="GameScene\MultiPlayScene.h" />
+    <ClInclude Include="GameScene\OptionScene.h" />
+    <ClInclude Include="GameNetwork\NetworkHost.h" />
+    <ClInclude Include="GameNetwork\NetworkPlayer.h" />
+    <ClInclude Include="GameNetwork\NetworkRoom.h" />
+    <ClInclude Include="GameNetwork\NetworkGamePlay.h" />
+    <ClInclude Include="GameNetwork\NetworkGuest.h" />
+    <ClInclude Include="Direct2D\CustomUI\MainMenuButton.h" />
+    <ClInclude Include="Direct2D\CustomUI\NumberInputField.h" />
+    <ClInclude Include="PokerRule\GameAI.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="PokerRule\PokerDefine.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="PokerRule\PokerRule.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="PokerRule\PokerSystem.h" />
+    <ClInclude Include="Direct2D\CustomUI\PokerUI.h" />
+    <ClInclude Include="Resource.h" />
+    <ClInclude Include="GameScene\SinglePlayScene.h" />
+    <ClInclude Include="GameSound\Sound.h" />
+    <ClInclude Include="GameScene\SceneManager.h" />
+    <ClInclude Include="GameOption\SupportWindow.h" />
+    <ClInclude Include="GameScene\SinglePlay\SinglePlaySettingScene.h" />
+    <ClInclude Include="GameScene\SinglePlay\SinglePlayingScene.h" />
+    <ClInclude Include="Direct2D\Animation\StartAnimation.h" />
+    <ClInclude Include="targetver.h" />
+    <ClInclude Include="TexasHoldemPoker.h" />
+    <ClInclude Include="Direct2D\BasicUI\UIArea.h" />
+    <ClInclude Include="Direct2D\BasicUI\UIBoxArea.h" />
+    <ClInclude Include="Direct2D\CustomUI\UpAndDownButton.h" />
+    <ClInclude Include="Direct2D\AdvancedUI\TextOutputField.h" />
+    <ClInclude Include="Direct2D\AdvancedUI\TextInputField.h" />
+    <ClInclude Include="GameUtility\Timer.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Direct2D\Animation\CardAnimation.cpp" />
+    <ClCompile Include="Direct2D\CustomUI\CardImages.cpp" />
+    <ClCompile Include="Direct2D\CustomUI\CustomTextInputField.cpp" />
+    <ClCompile Include="Direct2D\AdvancedUI\Dialog.cpp" />
+    <ClCompile Include="Direct2D\CustomUI\CustomTextOutputField.cpp" />
+    <ClCompile Include="Funtions\ChangeCounter.cpp" />
+    <ClCompile Include="Direct2D\AdvancedUI\CheckBox.cpp" />
+    <ClCompile Include="Direct2D\CustomUI\BackButton.cpp" />
+    <ClCompile Include="Direct2D\AdvancedUI\CImage.cpp" />
+    <ClCompile Include="Direct3D\DirectXEngine.cpp" />
+    <ClCompile Include="Direct2D\AdvancedUI\Button.cpp" />
+    <ClCompile Include="Direct2D\Canvas.cpp" />
+    <ClCompile Include="Direct2D\BasicUI\CBitmap.cpp" />
+    <ClCompile Include="Direct2D\BasicUI\CEllipse.cpp" />
+    <ClCompile Include="Direct2D\BasicUI\Color.cpp" />
+    <ClCompile Include="Direct2D\BasicUI\CRectangle.cpp" />
+    <ClCompile Include="Direct2D\AdvancedUI\ListView.cpp" />
+    <ClCompile Include="Direct2D\BasicUI\RectTransform.cpp" />
+    <ClCompile Include="Direct2D\BasicUI\RigidBody2D.cpp" />
+    <ClCompile Include="Direct2D\BasicUI\Shape.cpp" />
+    <ClCompile Include="Direct2D\BasicUI\Text.cpp" />
+    <ClCompile Include="GameScene\ExitScene.cpp" />
+    <ClCompile Include="Funtions\MyFunctions.cpp" />
+    <ClCompile Include="GameSound\AudioEngine.cpp" />
+    <ClCompile Include="GameSound\BackGroundSound.cpp" />
+    <ClCompile Include="Direct2D\Direct2DEngine.cpp" />
+    <ClCompile Include="GameSound\EffectSound.cpp" />
+    <ClCompile Include="GameUtility\GameTime.cpp" />
+    <ClCompile Include="GameUtility\FileSaveAndLoader.cpp" />
+    <ClCompile Include="GameObejct\GameObject.cpp" />
+    <ClCompile Include="GameOption\GameOption.cpp" />
+    <ClCompile Include="GameScene\GameScene.cpp" />
+    <ClCompile Include="GameScene\SinglePlayScene.cpp" />
+    <ClCompile Include="GameScene\LoadingScene.cpp" />
+    <ClCompile Include="GameScene\MainMenuScene.cpp" />
+    <ClCompile Include="GameScene\MultiPlayScene.cpp" />
+    <ClCompile Include="GameScene\OptionScene.cpp" />
+    <ClCompile Include="GameNetwork\NetworkHost.cpp" />
+    <ClCompile Include="GameNetwork\NetworkPlayer.cpp" />
+    <ClCompile Include="GameNetwork\NetworkRoom.cpp" />
+    <ClCompile Include="GameNetwork\NetworkGamePlay.cpp" />
+    <ClCompile Include="GameNetwork\NetworkGuest.cpp" />
+    <ClCompile Include="GameSound\Sound.cpp" />
+    <ClCompile Include="GameScene\SceneManager.cpp" />
+    <ClCompile Include="Direct2D\CustomUI\MainMenuButton.cpp" />
+    <ClCompile Include="Direct2D\CustomUI\NumberInputField.cpp" />
+    <ClCompile Include="PokerRule\GameAI.c">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="PokerRule\PokerRule.c">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GameOption\SupportWindow.cpp" />
+    <ClCompile Include="GameScene\SinglePlay\SinglePlaySettingScene.cpp" />
+    <ClCompile Include="GameScene\SinglePlay\SinglePlayingScene.cpp" />
+    <ClCompile Include="PokerRule\PokerSystem.cpp" />
+    <ClCompile Include="Direct2D\Animation\StartAnimation.cpp" />
+    <ClCompile Include="Direct2D\CustomUI\PokerUI.cpp" />
+    <ClCompile Include="TexasHoldemPoker.cpp" />
+    <ClCompile Include="Direct2D\BasicUI\UIArea.cpp" />
+    <ClCompile Include="Direct2D\BasicUI\UIBoxArea.cpp" />
+    <ClCompile Include="Direct2D\CustomUI\UpAndDownButton.cpp" />
+    <ClCompile Include="Direct2D\AdvancedUI\TextOutputField.cpp" />
+    <ClCompile Include="Direct2D\AdvancedUI\TextInputField.cpp" />
+    <ClCompile Include="GameUtility\Timer.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="TexasHoldemPoker.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="small.ico" />
+    <Image Include="TexasHoldemPoker.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
