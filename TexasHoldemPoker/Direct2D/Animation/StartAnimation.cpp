@@ -78,7 +78,7 @@ bool StartAnimation::Update(double deltaTime)
 		if (m_AnimationValue <= 0.0f)
 		{
 			m_IsAnimate = false;
-			return false;
+			return m_IsAnimate;
 		}
 
 		m_BannerBackground->SetColor(D2D1::ColorF(0.0f, 0.0f, 0.0f, 0.9f * m_AnimationValue));
@@ -86,7 +86,7 @@ bool StartAnimation::Update(double deltaTime)
 		m_TextForDraw->GetText()->SetFontColor(D2D1::ColorF(1.0f, 1.0f, 1.0f, 1.0f * m_AnimationValue));
 	}
 
-	return true;
+	return m_IsAnimate;
 }
 
 bool StartAnimation::Release()

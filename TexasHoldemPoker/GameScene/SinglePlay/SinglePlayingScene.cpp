@@ -97,6 +97,7 @@ bool SinglePlayingScene::Initialize(Direct2DEngine* D2DEngine, AudioEngine* audi
 
 bool SinglePlayingScene::Render()
 {
+	m_BackButton->Render();
 	m_CardImages->Draw(100, 100);
 	m_PokerUI->Render();
 
@@ -108,7 +109,9 @@ bool SinglePlayingScene::Render()
 bool SinglePlayingScene::Update()
 {
 	m_GameTime.Update();
-	m_StartAnimation->Update(m_GameTime.GetDeltaTime());
+	if (!m_StartAnimation->Update(m_GameTime.GetDeltaTime()))
+		Is_Animate = false;
+
 	return true;
 }
 
@@ -125,7 +128,7 @@ bool SinglePlayingScene::Release()
 
 bool SinglePlayingScene::Start()
 {
-	m_StartAnimation->Start();
+	Is_Animate = m_StartAnimation->Start();
 	reinterpret_cast<BackGroundSound*>(SceneManager::instance().GetMainBGM())->Stop();
 	return true;
 }
@@ -137,14 +140,7 @@ bool SinglePlayingScene::End()
 
 LRESULT SinglePlayingScene::SceneProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 {
-	if (Is_Animate)
-	{
-		switch (message)
-		{
-			
-		}
-	}
-	else
+	if (!Is_Animate)
 	{
 		switch (message)
 		{
@@ -152,6 +148,42 @@ LRESULT SinglePlayingScene::SceneProc(HWND hWnd, UINT message, WPARAM wParam, LP
 		}
 	}
 
+	// 백 버튼 이벤트
+	POINT pt;
+	GetCursorPos(&pt);
+	ScreenToClient(hWnd, &pt);
+
+	m_PokerUI->PokerUIFunc(hWnd, message, wParam, lParam, pt.x, pt.y, Is_Animate);
+
+	switch (message)
+	{
+	case WM_MOUSEMOVE:
+		if (m_BackButton->IsInside(pt.x, pt.y))
+		{
+			m_BackButton->Touched();
+			break;
+		}
+		else
+			m_BackButton->Normally();
+
+		break;
+	case WM_LBUTTONDOWN: // Mouse Click & Event
+		if (m_BackButton->IsInside(pt.x, pt.y))
+		{
+			m_BackButton->Pressed();
+			break;
+		}
+
+		break;
+	case WM_LBUTTONUP: // 버튼 이벤트 처리
+		if (m_BackButton->IsInside(pt.x, pt.y))
+		{
+			m_BackButton->Touched();
+			SceneManager::instance().EventListen(m_BackButton->GetEvent());
+			break;
+		}
+		break;
+	}
 	return 0;
 }
 

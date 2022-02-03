@@ -28,6 +28,7 @@ bool MainMenuButton::InitializeEx(Direct2DEngine* D2DEngine, int x, int y, int w
 	m_NormalColor = D2D1::ColorF(0.1f, 0.5f, 0.5f, 0.7f);
 	m_PressColor = D2D1::ColorF(0.05f, 0.25f, 0.25f, 0.7f);
 	m_TouchColor = D2D1::ColorF(0.2f, 0.6f, 0.6f, 0.7f);
+	m_DisabledColor = D2D1::ColorF(0.5f, 0.5f, 0.5f, 0.7f);
 	reinterpret_cast<CRectangle*>(this->GetShape())->SetColor(m_NormalColor);
 	reinterpret_cast<CRectangle*>(this->GetShape())->SetFillColor(m_NormalColor);
 
@@ -60,5 +61,6 @@ void MainMenuButton::Selected() // 버튼 선택시
 
 void MainMenuButton::Disabled() // 버튼 비선택시
 {
-
+	reinterpret_cast<CRectangle*>(this->GetShape())->SetColor(m_DisabledColor);
+	reinterpret_cast<CRectangle*>(this->GetShape())->SetFillColor(m_DisabledColor);
 }

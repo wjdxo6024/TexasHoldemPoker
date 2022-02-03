@@ -41,7 +41,7 @@ bool CRectangle::Draw()
 
 	if (IsRound)
 	{
-		D2D1_ROUNDED_RECT roundRect = { m_Rect, 10.0f, 10.0f };
+		D2D1_ROUNDED_RECT roundRect = { m_Rect, 5.0f, 5.0f };
 		m_pD2DEngine->GetDeviceContext()->DrawRoundedRectangle(roundRect, *m_shapeBrush.GetAddressOf(), m_LineStroke);
 
 		if (IsFill)

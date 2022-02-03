@@ -200,6 +200,7 @@
     <ClInclude Include="GameNetwork\NetworkGuest.h" />
     <ClInclude Include="Direct2D\CustomUI\MainMenuButton.h" />
     <ClInclude Include="Direct2D\CustomUI\NumberInputField.h" />
+    <ClInclude Include="Direct2D\Animation\NoticeAnimation.h" />
     <ClInclude Include="PokerRule\GameAI.h">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
     </ClInclude>
@@ -275,6 +276,7 @@
     <ClCompile Include="GameScene\SceneManager.cpp" />
     <ClCompile Include="Direct2D\CustomUI\MainMenuButton.cpp" />
     <ClCompile Include="Direct2D\CustomUI\NumberInputField.cpp" />
+    <ClCompile Include="Direct2D\Animation\NoticeAnimation.cpp" />
     <ClCompile Include="PokerRule\GameAI.c">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
     </ClCompile>

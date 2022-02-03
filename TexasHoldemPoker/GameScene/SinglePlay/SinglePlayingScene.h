@@ -17,7 +17,7 @@ extern "C"
 #include "../../Direct2D/CustomUI/PokerUI.h"
 #include "../../GameUtility/GameTime.h"
 #include "../../Direct2D/Animation/StartAnimation.h"
-#include "../../Direct2D/CustomUI/CustomTextOutputField.h"
+#include "../../Direct2D/AdvancedUI/TextOutputField.h"
 #include "../../GameSound/BackGroundSound.h"
 // 실질적으로 게임이 이루어지는 씬.
 

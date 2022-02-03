@@ -246,6 +246,9 @@
     <ClInclude Include="Direct2D\CustomUI\PokerUI.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
+    <ClInclude Include="Direct2D\Animation\NoticeAnimation.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="TexasHoldemPoker.cpp">
@@ -429,6 +432,9 @@
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="Direct2D\CustomUI\PokerUI.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Direct2D\Animation\NoticeAnimation.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>

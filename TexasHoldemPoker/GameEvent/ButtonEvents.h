@@ -17,8 +17,15 @@ enum class ButtonEvent
 
 	// SinglePlay
 	ButtonEvent_SinglePlay_Back,
+	ButtonEvent_SinglePlay_Fold,
+	ButtonEvent_SinglePlay_Call,
+	ButtonEvent_SinglePlay_Raise,
+
 	// MultiPlay
 	ButtonEvent_MultiPlay_Back,
+	ButtonEvent_MultiPlay_Fold,
+	ButtonEvent_MultiPlay_Call,
+	ButtonEvent_MultiPlay_Raise,
 	// Option
 	ButtonEvent_Option_Back,
 
