@@ -86,12 +86,24 @@ bool SinglePlayingScene::Initialize(Direct2DEngine* D2DEngine, AudioEngine* audi
 	else
 		return false;
 
+	m_NoticeAnimation = new NoticeAnimation;
+	if (m_NoticeAnimation != NULL)
+	{
+		m_NoticeAnimation->Initialize(extEngine, extGameOption);
+	}
+	else
+		return false;
+
 	PlayBGM = new BackGroundSound();
 	if (PlayBGM != NULL)
 	{
 		PlayBGM->InitializeBasic(L"./Resource/Audio/PlayBGM.wav", extAudioEngine, gameOption);
 	}
 	PlayBGM->Play();
+
+	m_NoticeAnimation->InputMessage(L"Test String1");
+	m_NoticeAnimation->InputMessage(L"Test String2 Test String2 ");
+	m_NoticeAnimation->InputMessage(L"Test String3 Test String3 TestString 3");
 	return true;
 }
 
@@ -100,7 +112,7 @@ bool SinglePlayingScene::Render()
 	m_BackButton->Render();
 	m_CardImages->Draw(100, 100);
 	m_PokerUI->Render();
-
+	m_NoticeAnimation->Render();
 
 	m_StartAnimation->Render();
 	return true;
@@ -111,7 +123,10 @@ bool SinglePlayingScene::Update()
 	m_GameTime.Update();
 	if (!m_StartAnimation->Update(m_GameTime.GetDeltaTime()))
 		Is_Animate = false;
+	else
+		m_PokerUI->DisabledActionButton();
 
+	m_NoticeAnimation->Update(m_GameTime.GetDeltaTime());
 	return true;
 }
 
@@ -119,6 +134,7 @@ bool SinglePlayingScene::Release()
 {
 	PlayBGM->Stop();
 	SAFE_RELEASE_AND_DELETE(PlayBGM);
+	SAFE_RELEASE_AND_DELETE(m_NoticeAnimation);
 	SAFE_RELEASE_AND_DELETE(m_StartAnimation);
 	SAFE_RELEASE_AND_DELETE(m_PokerUI);
 	SAFE_RELEASE_AND_DELETE(m_BackButton);

@@ -23,20 +23,33 @@ bool PokerUI::Initialize(Direct2DEngine* D2DEngine, GameOption* gameOption, Card
 
 	// 테이블 UI
 
-	int CardTableX = (extGameOption->GetWidth() / 2) + ScalingUI_X(extCardImages->GetCardWidth() / 2, extGameOption->GetWidth())
-		+ ScalingUI_X(extCardImages->GetCardWidth(), extGameOption->GetWidth()) +
-		ScalingUI_X(1 * 2, extGameOption->GetWidth());
-	for (int i = 0; i < 5; i++)
+	int CardTableX = (extGameOption->GetWidth() / 2) + ScalingUI_X(extCardImages->GetCardWidth() / 2, extGameOption->GetWidth()) +
+		ScalingUI_X(20, extGameOption->GetWidth());
+	for (int i = 0; i < 3; i++)
 	{
 		m_CardTable[i] = new CRectangle;
 		m_CardTable[i]->Initialize(extEngine, CardTableX,
-			(extGameOption->GetHeight() / 2) - ScalingUI_Y(extCardImages->GetCardHeight() / 2, extGameOption->GetHeight()),
+			(extGameOption->GetHeight() / 2) - ScalingUI_Y(extCardImages->GetCardHeight(), extGameOption->GetHeight()) - ScalingUI_Y(100, extGameOption->GetHeight()),
 			ScalingUI_X(extCardImages->GetCardWidth(), extGameOption->GetWidth()),
 			ScalingUI_Y(extCardImages->GetCardHeight(), extGameOption->GetHeight()));
 		m_CardTable[i]->SetColor(D2D1::ColorF::White);
 		m_CardTable[i]->SetStroke(2.0f);
 		m_CardTable[i]->SetRound(true);
-		CardTableX += -(ScalingUI_X(1, extGameOption->GetWidth()) + ScalingUI_X(extCardImages->GetCardWidth(), extGameOption->GetWidth()));
+		CardTableX += -(ScalingUI_X(20, extGameOption->GetWidth()) + ScalingUI_X(extCardImages->GetCardWidth(), extGameOption->GetWidth()));
+	}
+
+	CardTableX = (extGameOption->GetWidth() / 2) + ScalingUI_X(20, extGameOption->GetWidth());
+	for (int i = 3; i < 5; i++)
+	{
+		m_CardTable[i] = new CRectangle;
+		m_CardTable[i]->Initialize(extEngine, CardTableX,
+			(extGameOption->GetHeight() / 2) - ScalingUI_Y(80, extGameOption->GetHeight()),
+			ScalingUI_X(extCardImages->GetCardWidth(), extGameOption->GetWidth()),
+			ScalingUI_Y(extCardImages->GetCardHeight(), extGameOption->GetHeight()));
+		m_CardTable[i]->SetColor(D2D1::ColorF::White);
+		m_CardTable[i]->SetStroke(2.0f);
+		m_CardTable[i]->SetRound(true);
+		CardTableX += -(ScalingUI_X(20, extGameOption->GetWidth()) + ScalingUI_X(extCardImages->GetCardWidth(), extGameOption->GetWidth()));
 	}
 
 	// 플레이어 UI
@@ -553,6 +566,15 @@ bool PokerUI::ShowPlayersTurn(int index) // 대상 플레이어가 턴상태이면 다르게 출
 	return true;
 }
 
+bool PokerUI::DisabledActionButton()
+{
+	m_FoldButton->Disabled();
+	m_CallButton->Disabled();
+	m_RaiseButton->Disabled();
+
+	return true;
+}
+
 bool PokerUI::CardSet()
 {
 	return true;
@@ -560,13 +582,7 @@ bool PokerUI::CardSet()
 
 ButtonEvent PokerUI::PokerUIFunc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam, int x, int y, bool IsAnimate)
 {
-	if (IsAnimate) // 버튼 비활성화
-	{
-		m_FoldButton->Disabled();
-		m_CallButton->Disabled();
-		m_RaiseButton->Disabled();
-	}
-	else
+	if (!IsAnimate) // 버튼 비활성화
 	{
 		switch (message)
 		{

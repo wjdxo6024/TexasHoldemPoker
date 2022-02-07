@@ -98,3 +98,47 @@ void CRectangle::SetFillColor(D2D1::ColorF color)
 	m_FillColor = color;
 	m_FillBrush->SetColor(m_FillColor);
 }
+
+void CRectangle::SetPosX(float x)
+{
+	float beforeWidth = m_Rect.right - m_Rect.left;
+	m_Rect.left = x;
+	m_Rect.right = x + beforeWidth;
+}
+
+void CRectangle::SetPosY(float y)
+{
+	float beforeHeight = m_Rect.bottom - m_Rect.top;
+	m_Rect.top = y;
+	m_Rect.bottom = y + beforeHeight;
+}
+
+void CRectangle::SetPos(float x, float y)
+{
+	this->SetPosX(x);
+	this->SetPosY(y);
+}
+
+void CRectangle::SetWidth(float width)
+{
+	if (m_Rect.right - m_Rect.left > width)
+	{
+		m_Rect.right -= (m_Rect.right - width);
+	}
+	else
+	{
+		m_Rect.right += (width - m_Rect.right);
+	}
+}
+
+void CRectangle::SetHeight(float height)
+{
+	if (m_Rect.bottom - m_Rect.top > height)
+	{
+		m_Rect.bottom -= (m_Rect.bottom - height);
+	}
+	else
+	{
+		m_Rect.bottom += (height - m_Rect.bottom);
+	}
+}

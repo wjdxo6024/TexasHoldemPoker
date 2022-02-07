@@ -30,7 +30,7 @@ public:
 	virtual bool Update();
 	virtual bool Release();
 
-	virtual bool Repos(int x, int y);
+	virtual bool Repos(float x, float y);
 	virtual bool OnResize(Direct2DEngine* engine, int width, int height);
 };
 

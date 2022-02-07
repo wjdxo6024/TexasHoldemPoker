@@ -68,7 +68,7 @@ void Shape::SetColor(D2D1::ColorF color)
 	m_shapeBrush->SetColor(m_ShapeLineColor);
 }
 
-void Shape::SetPosition(int x, int y)
+void Shape::SetPos(int x, int y)
 {
 
 }

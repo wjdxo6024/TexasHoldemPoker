@@ -11,6 +11,7 @@ class TextOutputField
 {
 protected:
 	UIBoxArea m_Area;
+	RECT m_TextRT;
 	CBitmap* m_BackgroundImage;
 	CRectangle* m_BackgroundRect;
 
@@ -30,6 +31,15 @@ public:
 	virtual bool Update();
 	virtual bool Release();
 
+	UIBoxArea& GetArea();
+	void SetPosX(float x);
+	void SetPosY(float y);
+	void SetPos(float x, float y);
+	void SetWidth(float width);
+	void SetHeight(float height);
+
+	void UpdateTextRect();
+	
 	bool CreateImage(WCHAR* filepath);
 	CBitmap* GetImage();
 	bool CreateRectangle();

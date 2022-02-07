@@ -17,6 +17,7 @@ extern "C"
 #include "../../Direct2D/CustomUI/PokerUI.h"
 #include "../../GameUtility/GameTime.h"
 #include "../../Direct2D/Animation/StartAnimation.h"
+#include "../../Direct2D/Animation/NoticeAnimation.h"
 #include "../../Direct2D/AdvancedUI/TextOutputField.h"
 #include "../../GameSound/BackGroundSound.h"
 // 실질적으로 게임이 이루어지는 씬.
@@ -45,9 +46,10 @@ private:
 	CardImages* m_CardImages;
 	PokerUI* m_PokerUI;
 
-	// Start Cut Scene
+	// Animations
 	StartAnimation* m_StartAnimation;
-	// End Cut Scene
+	NoticeAnimation* m_NoticeAnimation;
+	// Dialog
 
 	// Back Button & Cut Scene
 	MainMenuButton* m_BackButton;

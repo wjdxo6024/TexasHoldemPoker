@@ -21,7 +21,7 @@ private:
 	int m_AnimationTime; // 애니메이션 시간
 
 	float m_AnimationValue;
-	float m_TempValue; // 
+	float m_TempValue;
 	bool m_IsAnimate;
 public:
 	StartAnimation();

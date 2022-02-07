@@ -34,7 +34,7 @@ public:
 	virtual void Release();
 
 	virtual void SetColor(D2D1::ColorF color);
-	virtual void SetPosition(int x, int y); // TODO : 회전할 경우 다른 요소들이 깨진다.
+	virtual void SetPos(int x, int y); // TODO : 회전할 경우 다른 요소들이 깨진다.
 	virtual void SetRotationDegree(float Degree);
 	
 };

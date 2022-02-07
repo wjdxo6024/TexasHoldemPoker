@@ -107,7 +107,7 @@ bool CBitmap::Release()
 	return true;
 }
 
-bool CBitmap::Repos(int x, int y)
+bool CBitmap::Repos(float x, float y)
 {
 	m_imageX = x;
 	m_imageY = y;

@@ -17,6 +17,7 @@ private:
 	// Game UI, 0은 반드시 플레이어
 	TextOutputField* m_PhaseShow;
 	TextOutputField* m_EventShow;
+	TextOutputField* m_ShowBettingMoney;
 	CRectangle* m_CardTable[5];
 
 	// 0         4
@@ -50,6 +51,7 @@ public:
 	bool SetPlayersData(Player* players, int index); // UI에 플레이어의 정보를 채운다.
 	bool ShowPlayersTurn(int index); // 대상 플레이어가 턴상태이면 다르게 출력. 
 
+	bool DisabledActionButton();
 	bool CardSet();
 
 	ButtonEvent PokerUIFunc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam, int x, int y, bool IsAnimate);

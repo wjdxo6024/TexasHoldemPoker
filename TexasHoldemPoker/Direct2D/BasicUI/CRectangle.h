@@ -25,5 +25,11 @@ public:
 	void SetRound(bool isRound);
 	void SetStroke(float stroke);
 	void SetFillColor(D2D1::ColorF color);
+
+	void SetPosX(float x);
+	void SetPosY(float y);
+	void SetPos(float x, float y);
+	void SetWidth(float width);
+	void SetHeight(float height);
 };
 
